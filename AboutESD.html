@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="AboutESD">
+    <title>How'bout ESD</title>
+    <style>
+        body {
+            background-color:rgb(75, 91, 137); color:ghostwhite;
+            margin : 25px 15% 0px;
+        }
+        a{text-decoration : none;}
+        a:link{color:rgb(255, 176, 29);}
+        a:hover{color:#D2691E;}
+        a:visited{color:rgb(255, 176, 29);}
+        div.d1:hover{color: rgb(206, 209, 45)}
+        div.body{background-color:rgb(35, 29, 59); color:white;}
+        .floating{
+            background-color: rgb(62, 34, 139); border:2px dashed black;
+            position: fixed; z-index: -1;
+            right: 2%; top: 180px; color:greenyellow;
+            text-align:center; width: 70px;
+            border-radius: 8px; -webkit-border-radius: 8px;
+            overflow: hidden;
+            }
+        but{
+            border-style : solid;
+            border-color : white;
+            margin : 20px 0px 20px;
+            padding : 3px 10px 3px;
+            border-radius : 15px;
+            background-color : skyblue;
+            color : darkblue;
+        }
+        but:hover{
+            background-color : lightseagreen;
+            color : rgb(224, 221, 50);
+            }
+        but1{
+            margin : auto;
+        }
+        but1:hover{
+            background-color:rgb(244, 255, 128);
+            color:#412da2;
+            border-style : solid;
+            border-color : rgb(19, 190, 19);
+            }
+    </style>
+</head>
+
+<body>
+    <div class="floating">
+        <div align="center">단축버튼</div>
+        <div align="center"><a href="#ESD"><but1>ESD</but1></a></div>
+        <div align="center"><a href="#steam"><but1>Steam</but1></a></div>
+        <div align="center"><a href="#origin"><but1>Origin</but1></a></div>
+        <div align="center"><a href="#humble"><but1>Hum.bun</but1></a></div>
+        <div align="center"><a href="#amazon"><but1>Amazon</but1></a></div>
+        <div align="center"><a href="#gog"><but1>GOG</but1></a></div>
+        <div align="center"><a href="#kin"><but1>Kinguin</but1></a></div>
+    </div>
+    <div id="whole">
+        <div class="head" align="center">
+            <img src="AboutESD1.png" width="30%" height="30%">
+            <h1 align="center">&lt;&lt; ESD를 알아보자 &gt;&gt;</h1>
+            <hr size="5" align="center" width="90%"></hr>
+            <a href="#ESD"><but>[ESD란]</but></a> &nbsp;
+            <a href="#steam"><but>[스팀]</but></a> &nbsp;
+            <a href="#origin"><but>[오리진]</but></a> &nbsp;
+            <a href="#humble"><but>[험블번들]</but></a> &nbsp;
+            <a href="#amazon"><but>[아마존]</but></a> &nbsp;
+            <a href="#gog"><but>[G.O.G.]</but></a> &nbsp;
+            <a href="#kin"><but>[킹귄]</but></a>
+        </div>
+        <div class="body">
+            <ul>
+                <li>
+                    <div id="boutESD">
+                        <p id="ESD"></p>
+                        <h3>ESD</h3>
+                        <img src="exam1.png" width="100%" height="100%">
+                        <img src="selltobuy.gif" width="50%" height="50%">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <p id="steam"></p>
+                        <h3>Steam</h3>
+                        <a href="https://store.steampowered.com" target="_blank" title="스팀 바로가기">Go!</a>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <p id="origin"></p>
+                        <h3>Origin</h3>
+                        <a href="https://www.origin.com" target="_blank" title="오리진 바로가기">Go!</a>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <p id="humble"></p>
+                        <h3>Humble Bundle</h3>
+                        <a href="https://www.humblebundle.com" target="_blank" title="험블번들 바로가기">Go!</a>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <p id="amazon"></p>
+                        <h3>Amazon</h3>
+                        <a href="https://www.amazon.com" target="_blank" title="아마존 바로가기">Go!</a>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="d1">
+                        <p id="gog"></p>
+                        <h3>Good Old Game</h3>
+                        <a href="https://www.gog.com" target="_blank" title="지오지 바로가기">Go!</a>
+
+                    </div>
+                    <div class="d1">
+                        <p id="kin"></p>
+                        <h3>Kinguin</h3>
+                        <a href="https://www.kinguin.net/" target="_blank" title="킹귄 바로가기">Go!</a>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr size="10"></hr>
+    <footer>
+        <!--개체삽입/다른 웹 넣기 테스트-->
+        <p>테스트</p>
+        <embed src="https://store.steampowered.com/search/?term=terraria" width="500" height="500">
+    </footer>
+</body>
+
+</html>
