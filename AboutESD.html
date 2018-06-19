@@ -10,7 +10,11 @@
         body {
             background-color:rgb(75, 91, 137); color:ghostwhite;
             margin : 25px 15% 0px;
+            max-width: 850px;
         }
+        ul{padding: 15px 5% 15px;}
+        .left{float: left; margin: 15px;}
+        .right{float: right; margin: 15px;}
         a{text-decoration : none;}
         a:link{color:rgb(255, 176, 29);}
         a:hover{color:#D2691E;}
@@ -38,15 +42,19 @@
             background-color : lightseagreen;
             color : rgb(224, 221, 50);
             }
-        but1{
-            margin : auto;
-        }
+        but1{margin : auto;}
         but1:hover{
             background-color:rgb(244, 255, 128);
             color:#412da2;
             border-style : solid;
             border-color : rgb(19, 190, 19);
             }
+        bol{
+            font-weight: bolder;
+            font-size: 20px;
+            }
+        cir{list-style-type: circle;}
+        logo{max-width: 100px; max-height:400px;}
     </style>
 </head>
 
@@ -75,63 +83,79 @@
             <a href="#kin"><but>[킹귄]</but></a>
         </div>
         <div class="body">
-            <ul>
+        <ul>
+            <div id="boutESD">
                 <li>
-                    <div id="boutESD">
-                        <p id="ESD"></p>
-                        <h3>ESD</h3>
-                        <img src="exam1.png" width="100%" height="100%">
-                        <img src="selltobuy.gif" width="50%" height="50%">
-
-                    </div>
+                    <p id="ESD"></p>
+                    <h3>ESD</h3>
+                    <bol>&nbsp;ESD란</bol>
+                    &nbsp;Electronic Software Distribution(전자 소프트웨어 유통망)의 줄임말로, 소프트웨어를 판매하는 방식중 하나입니다. 인터넷이 발전하기 이전엔 비-물질적인 소프트웨어를 매매하기 위해선 CD, 디스켓 등의 물리적인 저장장치에 담을 수밖에 없었습니다.
+                    <img src="exam1.png" width="100%" height="100%" alt="플레이어들은 인터넷을 통해 빠르고 간편하게 소프트웨어를 받을 수 있습니다." title="과거와 현재 비교"><br>
+                    &nbsp;하지만 1990년대 WWW(World Wide Web = W3)인 인터넷이 등장하며 사람들은 인터넷을 통해 소프트웨어를 전자 상에서 거래하는 방식이 당시의 운송방식에 비교해 더 빠르고 확실함을 깨달았습니다.
+                    이후 2000년대에 밸브 사(社)의 '스팀'과 EA 다운로드센터(現 오리진)이 그 강점을 내세워 성공을 거두자 다른 소프트웨어 업체들에서도 ESD 시장에 발들이며 본격적인 ESD 시장이 형성되었습니다.<br>
+                    <img src="selltobuy.gif" width="100%" height="100%" class="left" alt="웹을 통한 매매는 판매자와 구매자 모두 이득입니다." title="웹을통한 소프트웨어 배포는 쌍방이득">
+                    &nbsp;ESD는 단순히 빠르고 확실한 것뿐만 아니라 비용상으로도 판매자나 구매자 모두에게 득이 되었습니다. 이전의 방식으로는 프로그램의 이식, 저장매체의 포장, 상품의 운송비 등 시간과 비용이 판매가에 모두 포함되어있었지만, ESD는 조금의 과장을 더 해서 지구 반대편에서 구매하더라도 더 저렴하게 구매할 수도 있습니다. 
+                    무엇보다 실물은 판매에 수량한도가 있지만, ESD는 제공서비스만 존재한다면 언제든 구매/이용이 가능하며 손상의 우려 또한 없습니다.                        <br><br>
+                    &nbsp;물론 너무 간편한 방식이 되려 문제가 되기도 합니다. 간단한 배포는 불법제품(일명 복돌이)의 확산을 쉽게 했고, 비(非)물리적인 제품 판매는 CD키나 구매계정을 잃으면 제품을 잃어버리는 꼴이 되며, 실물(패키지)은 중고로서의 상품 가치가 있지만, ESD는 물질적인'소유'가 불가능하다는 한계가 있습니다.
+                    이를 보완하기 위해 잦은 할인을 통한 낮은 가격을 강점으로 세운 스팀을 선발로 많은 ESD 업계가 스팀과 같은 방침을 따랐고, 몇몇 제작사는 소비자들의 물질적 소유욕을 만족시키기 위해 패키지발매 후 자사의 ESD와 연동시키는 방법을 택하기도 했습니다.
+                    <br><br>
+                    <img src="logos.png" width="40%" height="40%" class="left logo" alt="ESD 판매처의 로고들입니다." title="쉽게말해 '소프트웨어'를 '판매'하면 ESD">
+                    &nbsp;유명한 ESD로 이동통신사 ESD인 원스토어(네이버 앱스토어 + T + Olleh + U+)가 있고, OS기본 ESD인 애플의 아이튠즈스토어와 구글의 구글플레이, 마이크로소프트의 마이크로소프트 스토어가 있습니다. 이외에도 한국의 한글과컴퓨터(한컴), 안철수연구소(V3), 이스트소프트(알툴즈)나 중국의 바이두 앱스토어, 텐센트 앱스토어도 ESD에 포함됩니다.
+                    <br><br>
+                    <img src="logos2.png" width="18%" height="18%" class="right logo">
+                    게임 ESD에는 블리자드의 배틀넷이나 유플레이처럼 자사 게임 판매를 기본으로 하는 판매처와 +a로 타사의 게임도 제공하는 오리진과 스팀이 있고, 위의 판매처를 포함한 다른 사이트들의 게임 키를 판매하는 험블번들, 지오지 닷컴 등의 '키셀러'들이 있습니다. 
+                    <br><br>
                 </li>
+            </div>
+            <br>
+            <div class="d1">
                 <li>
-                    <div class="d1">
-                        <p id="steam"></p>
-                        <h3>Steam</h3>
-                        <a href="https://store.steampowered.com" target="_blank" title="스팀 바로가기">Go!</a>
+                    <p id="steam"></p>
+                    <h3>Steam <a href="https://store.steampowered.com" target="_blank" title="스팀 바로가기">Go!</a></h3>
+                    
 
-                    </div>
                 </li>
+            </div>
+            <div class="d1">
                 <li>
-                    <div class="d1">
-                        <p id="origin"></p>
-                        <h3>Origin</h3>
-                        <a href="https://www.origin.com" target="_blank" title="오리진 바로가기">Go!</a>
+                    <p id="origin"></p>
+                    <h3>Origin <a href="https://www.origin.com" target="_blank" title="오리진 바로가기">Go!</a></h3>
+                    
 
-                    </div>
                 </li>
+            </div>
+            <div class="d1">
                 <li>
-                    <div class="d1">
-                        <p id="humble"></p>
-                        <h3>Humble Bundle</h3>
-                        <a href="https://www.humblebundle.com" target="_blank" title="험블번들 바로가기">Go!</a>
+                    <p id="humble"></p>
+                    <h3>Humble Bundle <a href="https://www.humblebundle.com" target="_blank" title="험블번들 바로가기">Go!</a></h3>
+                    
 
-                    </div>
                 </li>
+            </div>
+            <div class="d1">
                 <li>
-                    <div class="d1">
-                        <p id="amazon"></p>
-                        <h3>Amazon</h3>
-                        <a href="https://www.amazon.com" target="_blank" title="아마존 바로가기">Go!</a>
-
-                    </div>
+                    <p id="amazon"></p>
+                    <h3>Amazon  <a href="https://www.amazon.com" target="_blank" title="아마존 바로가기">Go!</a></h3>
+                   
                 </li>
+            </div>
+            <div class="d1">
                 <li>
-                    <div class="d1">
-                        <p id="gog"></p>
-                        <h3>Good Old Game</h3>
-                        <a href="https://www.gog.com" target="_blank" title="지오지 바로가기">Go!</a>
+                    <p id="gog"></p>
+                    <h3>Good Old Game <a href="https://www.gog.com" target="_blank" title="지오지 바로가기">Go!</a></h3>
+                    
 
-                    </div>
-                    <div class="d1">
-                        <p id="kin"></p>
-                        <h3>Kinguin</h3>
-                        <a href="https://www.kinguin.net/" target="_blank" title="킹귄 바로가기">Go!</a>
-
-                    </div>
                 </li>
-            </ul>
+            </div>
+            <div class="d1">
+                <li>
+                    <p id="kin"></p>
+                    <h3>Kinguin <a href="https://www.kinguin.net/" target="_blank" title="킹귄 바로가기">Go!</a></h3>
+                    
+
+                </li>
+            </div>
+        </ul>
         </div>
     </div>
     <hr size="10"></hr>
