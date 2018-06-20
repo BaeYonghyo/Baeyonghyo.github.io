@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 
 <html>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./images/jQuery-1/11/3.min.js"><\/script>')</script>
 <head>
     <meta charset="UTF-8">
     <meta name="Author" content="AboutESD">
@@ -9,9 +10,18 @@
     <link href="https://fonts.googleapis.com/css?family=ABeeZee|Jura|Nanum+Gothic|Poor+Story" rel="stylesheet">    
     <style>
         whole{align-content: center;}
+        a.jcm-top{
+            position: fixed;
+            right: 55px; bottom: 55px;
+            border-radius: 5px;
+            text-align: center;
+            width: 45px; height: 45px;
+            font-size: 40px;
+            z-index: 999;
+        }
         body {
             background-color:rgb(75, 91, 137); color:ghostwhite;
-            margin : 25px 15% 0px; max-width: 850px;
+            margin : 25px 15%; max-width: 850px;
             line-height: 1.4; font-size: 125%;
             font-family: 'Poor Story', cursive;
             }
@@ -21,9 +31,9 @@
         .right{float: right; margin: 15px;}
         a{text-decoration : none;}
         h3{font-family: 'ABeeZee', sans-serif;}
-        a:link{color:rgb(255, 176, 29);}
-        a:hover{color:#D2691E;}
-        a:visited{color:rgb(255, 176, 29);}
+        a:link{color:#ff8f0f;}
+        a:hover{color:#4cfda5;}
+        a:visited{color:#ff8f0f;}
         div.d1{
             margin : 25px 5% 0px; max-width: 850px;
             line-height: 1.4; font-size: 118%;
@@ -32,15 +42,6 @@
         div.body{
             background-color:rgb(35, 29, 59);;
             border-radius: 25px ;
-            }
-        .floating{
-            background-color: rgb(62, 34, 139); border:2px solid black;
-            position: fixed; z-index: -1;
-            right: 2%; top: 180px; color:greenyellow;
-            text-align:center; width: 90px;
-            border-radius: 8px; -webkit-border-radius: 8px;
-            overflow: hidden;
-            font-family: 'Jura', sans-serif; font-weight: bold;
             }
         but{
             border-style : solid;
@@ -141,31 +142,36 @@
             border:1px solid #000069;
         }
     </style>
+    <script> 
+        $( document ).ready( function() { 
+            $( window ).scroll( function() { 
+                if ( $( this ).scrollTop() > 200 ) { 
+                    $( '.jcm-top' ).fadeIn(); 
+                } else { 
+                    $( '.jcm-top' ).fadeOut(); 
+                }
+            } ); 
+        $( '.jcm-top' ).click( function() { 
+            $( 'html, body' ).animate( { scrollTop : 0 }, 400 ); 
+                return false; 
+            } ); 
+        } );
+    </script> 
+            
 </head>
 
 <body>
-    <div class="floating">
-        <div align="center">단축버튼</div>
-        <div align="center"><a href="#ESD"><but1>ESD</but1></a></div>
-        <div align="center"><a href="#steam"><but1>Steam</but1></a></div>
-        <div align="center"><a href="#origin"><but1>Origin</but1></a></div>
-        <div align="center"><a href="#humble"><but1>Hum.bun</but1></a></div>
-        <div align="center"><a href="#amazon"><but1>Amazon</but1></a></div>
-        <div align="center"><a href="#gog"><but1>GOG</but1></a></div>
-        <div align="center"><a href="#kin"><but1>Kinguin</but1></a></div>
-    </div>
     <div id="whole">
         <div class="head" align="center">
             <img src="AboutESD1.png" width="30%" height="30%">
             <h1 align="center">&lt;&lt; ESD를 알아보자 &gt;&gt;</h1>
             <hr size="5" align="center" width="90%"></hr>
-            <a href="#ESD"><but>[ESD란]</but></a> &nbsp;
-            <a href="#steam"><but>[스팀]</but></a> &nbsp;
-            <a href="#origin"><but>[오리진]</but></a> &nbsp;
-            <a href="#humble"><but>[험블번들]</but></a> &nbsp;
-            <a href="#amazon"><but>[아마존]</but></a> &nbsp;
-            <a href="#gog"><but>[G.O.G.]</but></a> &nbsp;
-            <a href="#kin"><but>[킹귄]</but></a>
+            <a href="https://store.steampowered.com" target="_blank" title="스팀 바로가기"><but>[스팀]</but></a> &nbsp;
+            <a href="https://www.origin.com" target="_blank" title="오리진 바로가기"><but>[오리진]</but></a> &nbsp;
+            <a href="https://www.humblebundle.com" target="_blank" title="험블번들 바로가기"><but>[험블번들]</but></a> &nbsp;
+            <a href="https://www.amazon.com" target="_blank" title="아마존 바로가기"><but>[아마존]</but></a> &nbsp;
+            <a href="https://www.gog.com" target="_blank" title="지오지 바로가기"><but>[G.O.G.]</but></a> &nbsp;
+            <a href="https://www.kinguin.net/" target="_blank" title="킹귄 바로가기"><but>[킹귄]</but></a>
         </div>
         <div class="body">
             <div class="d1">
@@ -234,9 +240,9 @@
                             다양한 판매처(스팀/오리진/유플레이 등)의 키 판매와 더불어 이름에서 볼수있듯 '번들'이라하여 게임, 툴, 전자책 등 디지털콘텐츠를 패키지로 묶어파는 방식으로 유명합니다.<br>
                             <img src="HBlogos.png" width="40%" class="left logo">
                             각 번들은 정해진 기간동안 판매하는데 2주간 판매하는 일반적인 Humble Bundle(보통은 주제에 맞춰 험블-컨셉명-번들이라는 이름으로 판매합니다), 
-                            E북을 취급하며 1주간 판매하는 Books Bundle, 반짝세일과 같은의미로 하루간 판매하는 Flash Bundle 그리고 1메인(대작게임) 1~3개 + 서브(인디게임)3~5개를 한 달주기로 판매하는 Humble Monthly가 있습니다.
+                            E북을 취급하며 1주간 판매하는 Books Bundle, 반짝세일과 같은의미로 하루간 판매하는 Flash Bundle 그리고 메인(대작게임) 1~3개 + 서브(인디게임)3~5개를 한 달주기로 판매하는 Humble Monthly가 있습니다.
                             <img src="HBpay.png" width="100%" class="logo">
-                            험블번들의 놀라운 점은 사용자가 번들의 가격을 지정할 수 있다는 점입니다. 최소 1달러에서 시작하여 많은 금액을 낼수록 많은 상품을 받을수 있으며, 고정가인 15달러/25달러를 넘으면 번들 내 모든 콘텐츠를 받을 수 있습니다.
+                            험블번들의 놀라운 점은 <bol>사용자가 번들의 가격을 지정할 수 있다는 점</bol>입니다. 최소 1달러에서 시작하여 많은 금액을 낼수록 많은 상품을 받을수 있으며, 고정가인 15달러/25달러를 넘으면 번들 내 모든 콘텐츠를 받을 수 있습니다.
                             (보통 '티어'라 하여 1/5/8/15/25로 나뉘며 티어별로 얻을수 있는 상품 수가 제한되어있습니다) 또한 구매금액에서 콘텐츠제작자/자선단체기부/험블번들팀에 돌아갈 비율도 직접 설정이 가능합니다.
                         </div>
                     </li>
@@ -250,7 +256,7 @@
                             온라인 쇼핑몰로 유명한 아마존은 처음엔 종이책만 취급하던 인터넷 서점이였지만 사업확장을 거쳐 현재는 e북,음반,게임,노트북,핸드폰 등 다양하게 판매하고있습니다. 
                             실물상품은 used(중고)물품 판매도 이루어져 놀라운 값에 득템할수도 있습니다. 아마존도 다른 ESD처럼 PC게임판매도 진행하는데, ESD업계의 할인정책에 아마존 특유의 할인율도 적용되어 최신게임조차 무서운 할인값에 파는 경우를 볼 수 있습니다.(운이좋으면 신작게임을 반값에 구매 가능합니다).<br>
                             <img src="AZpack.png" width="35%" class="left logo">
-                            또한, '이번주의 딜'이라 불리는 1주 간격으로 유명 시리즈물을 묶어 할인가에 판매하는 상품은 대체적인 할인율이 87%에 달한다고 합니다. 
+                            또한, '이번주의 딜'이라 불리는 1주 간격으로 유명 시리즈물을 묶어 할인가에 판매하는 상품은 대체적인 할인율이 <bol>87%</bol>에 달한다고 합니다. 
                             거기다 본회사인 아마존에서 아마존 프라임 멤버쉽(연 $99)에 가입했다면 사전구매(및 얼리엑세스구매)시 20%할인받을 수 있고, 그 자회사인 트위치 프라임에 연동하여 트위치 구독/광고제거/기타 인게임 혜택과 더불어 매 달마다 변경되는 무료게임을 즐길 수 있으며 해당게임 구매시 할인받을 수 있습니다.
                         </div>
                     </li>
@@ -260,7 +266,15 @@
                         <label for="checkbox-5">G.O.G.</label>
                         <div class="content">
                             <h3>Good Old Game <a href="https://www.gog.com" target="_blank" title="지오지 바로가기">Go!</a></h3>
-                        
+                            <img src="gog.com.png" width="35%" class="right logo">
+                            이름에서 알수 있듯이 고전게임을 중점으로 취급하는 ESD였으나 현재는 고전게임을 비롯해 인디게임, 인디영화 및 고전영화와 일부 최신게임까지 다루고 있습니다. 
+                            GOG의 특이한점은 판매하고있는 모든 게임이 DRM-Free, 즉 <bol>디지털 저작권 관리가 제거</bol>되어있어 본인소유의 컴퓨터라면 수백대에 설치해도 아무런 제한이 없습니다. 
+                            따라서 같은 게임일지라도 DRM이 존재하는 타 플랫폼에 비해 '소유한다'는 느낌을 받을 수 있는데 거꾸로 도전과제기능이나 트레이딩카드 등은 사용할 수 없으며 DRM-Free라도 한 제품키로 멀티접속은 불가능합니다.<br>
+                            <img src="goggalaxy.png" width="18%"class="left logo">
+                            그래도 2017년 온라인 게이밍 플랫폼인 GOG갤럭시를 정식출시하면서 GOG의 DRM-Free라이브러리 클라이언트가 생겼고, 도전과제/소셜기능 및 스팀 등 타 서비스간의 크로스플랫폼 멀티플레이어를 지원하게 되었습니다.<br><br>
+                            <img src="insomnia.jpg" width="60%" class="right logo">
+                            GOG에는 '불면증세일(Insomnia Sales)'이라는 행사가 있는데 미리 지정된 게임이 랜덤으로 돌아가면서 나타나는 형태의 세일입니다. 대부분 70-80%사이고 50%이하는 거의 없어 그야말로 엄청난 할인율을 자랑하지만 수량이 제한되어있어 말 그대로 불면증을 겪게합니다. 
+                            이외에도 주중에 한번 Weekly Staff Picks, 매 주말마다 Weekend Promo가 있는데 특정 테마를 잡고 게임들을 할인하며 시즌세일때는 대부분의 명작게임들을 할인합니다. 고전명작 무료게임(울티마, 폴아웃 등)이 다수 갖추어져 있다는 것도 특징입니다.
                         </div>
                     </li>
                     <li>
@@ -269,18 +283,25 @@
                         <label for="checkbox-6">KINGUIN</label>
                         <div class="content">
                             <h3>Kinguin <a href="https://www.kinguin.net/" target="_blank" title="킹귄 바로가기">Go!</a></h3>
-                        
+                            <img src="KGlogo.png" width="40%" class="right logo">
+                            킹귄은 특이하게도 홍콩기반의 프로게임단이 운영하는 ESD게임키 판매사이트입니다. 정확히는 직접판매가 아닌 게임키 판매의 중매에 가까운데, 특정 제품을 구매하고자 하면 다양한 키셀러(또는 사이트)에서의 가격을 비교할 수 있습니다. 
+                            이 점이 빠른 비교를 통해 싸게 구입할 수 있다는 장점이 될 수 있지만 동시에 알 수 없는 판매자로부터 잘못된 키를 받을 수 있다는 심각한 단점이 될 수도 있습니다.<br>
+                            <img src="KGpro.png" width="40%" class="left logo">
+                            그래서 킹귄에서는 약간의 금액(2-3유로)을 더 내고 문제 발생시 언제든 정정요청/환불요청이 가능한 <bol>Buyer Protection</bol>이라는 시스템을 이용할 수 있습니다. 
+                            또한 판매자의 해당 제품 판매횟수를 확인할 수 있어 Buyer Protection 없이도 판단이 가능합니다.
+                            <img src="KGran.png" width="100%" class="logo">
+                            이외에도 킹귄이 중매판매 사이트라 가능한 Random key, 즉 가챠가 있습니다. 가격은 5유로 이내이지만 운이 좋다면 최신 유행게임도 얻을수 있습니다.
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
+        <a href="#" class="jcm-top hidden-xs hidden-sm" title="Back to Top"><img src="up.png" width="55px"></a> 
     </div>
-    <hr size="10"></hr>
+    <hr></hr>
     <footer>
-        <!--개체삽입/다른 웹 넣기 테스트-->
-        <p>테스트</p>
-        <embed src="https://store.steampowered.com/search/?term=terraria" width="500" height="500">
+        <a id="footer"></a>
+        2018-06-21 / Web-Programming / B877015 / BaeYonghyo
     </footer>
 </body>
 
