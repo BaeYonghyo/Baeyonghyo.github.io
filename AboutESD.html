@@ -6,28 +6,41 @@
     <meta charset="UTF-8">
     <meta name="Author" content="AboutESD">
     <title>How'bout ESD</title>
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee|Jura|Nanum+Gothic|Poor+Story" rel="stylesheet">    
     <style>
+        whole{align-content: center;}
         body {
             background-color:rgb(75, 91, 137); color:ghostwhite;
-            margin : 25px 15% 0px;
-            max-width: 850px;
-        }
+            margin : 25px 15% 0px; max-width: 850px;
+            line-height: 1.4; font-size: 125%;
+            font-family: 'Poor Story', cursive;
+            }
         ul{padding: 15px 5% 15px;}
+        li{list-style-type: none;}
         .left{float: left; margin: 15px;}
         .right{float: right; margin: 15px;}
         a{text-decoration : none;}
+        h3{font-family: 'ABeeZee', sans-serif;}
         a:link{color:rgb(255, 176, 29);}
         a:hover{color:#D2691E;}
         a:visited{color:rgb(255, 176, 29);}
-        div.d1:hover{color: rgb(206, 209, 45)}
-        div.body{background-color:rgb(35, 29, 59); color:white;}
+        div.d1{
+            margin : 25px 5% 0px; max-width: 850px;
+            line-height: 1.4; font-size: 118%;
+            font-family: 'Poor Story', cursive;
+            }
+        div.body{
+            background-color:rgb(35, 29, 59);;
+            border-radius: 25px ;
+            }
         .floating{
-            background-color: rgb(62, 34, 139); border:2px dashed black;
+            background-color: rgb(62, 34, 139); border:2px solid black;
             position: fixed; z-index: -1;
             right: 2%; top: 180px; color:greenyellow;
-            text-align:center; width: 70px;
+            text-align:center; width: 90px;
             border-radius: 8px; -webkit-border-radius: 8px;
             overflow: hidden;
+            font-family: 'Jura', sans-serif; font-weight: bold;
             }
         but{
             border-style : solid;
@@ -37,24 +50,96 @@
             border-radius : 15px;
             background-color : skyblue;
             color : darkblue;
+            margin-top: 30px;
+            font: bold;
         }
-        but:hover{
-            background-color : lightseagreen;
-            color : rgb(224, 221, 50);
-            }
-        but1{margin : auto;}
+        but:hover{background-color : lightseagreen; color : rgb(224, 221, 50);}
+        but1{margin-top:5;}
         but1:hover{
             background-color:rgb(244, 255, 128);
             color:#412da2;
             border-style : solid;
             border-color : rgb(19, 190, 19);
             }
-        bol{
-            font-weight: bolder;
-            font-size: 20px;
-            }
+        bol{font-weight: bolder; font-size: 110%;}
         cir{list-style-type: circle;}
         logo{max-width: 100px; max-height:400px;}
+            
+            /*accordion parts _ http://jsfiddle.net/m_raffaele/E4acF/ 에서 가공*/
+        .accordion {
+        margin:0 auto; padding:10px;
+        border:1px solid #000069; border-radius:10px;
+        width:85%;
+        margin-top: 5px; margin-bottom: 25px;
+        background:#8CBDED; color: #000069;
+        }
+        .accordion ul {
+            list-style:none;
+            margin:0;
+            padding:0;    
+        }
+        .accordion li {
+            margin:0;
+            padding:0;
+        }
+        .accordion [type=radio], .accordion [type=checkbox] {
+            display:none;
+        }
+        .accordion label {
+            display:block;
+            line-height:16px;
+            background:rgb(71, 104, 203);
+            border:1px solid #000069;
+            color:#000069;
+            text-shadow:1px 1px 1px rgba(255,255,255,0.3);
+            font-weight:700;
+            cursor:pointer;
+            text-transform:uppercase;
+            -webkit-transition: all .2s ease-out;
+            -moz-transition: all .2s ease-out;
+        }
+        .accordion ul li label:hover, .accordion [type=radio]:checked ~ label, .accordion [type=checkbox]:checked ~ label {
+            background:#0000c8;
+            color:#FFF;
+            text-shadow:1px 1px 1px rgba(0,0,0,0.5)
+        }
+        .accordion .content {
+            padding:0 10px;
+            overflow:hidden;
+            border:1px solid #8CBDED;
+            -webkit-transition: all .5s ease-out;
+            -moz-transition: all .5s ease-out;
+        }
+        .accordion p {
+            color:#333;
+            margin:0 0 10px;
+        }
+        .accordion h3 {
+            color:#010150;
+            padding:0;
+            margin:10px 0;
+        }
+        .vertical ul li {
+            overflow:hidden;
+            margin:0 0 1px;
+        }
+        .vertical ul li label {
+            padding:10px;
+        }
+        .vertical [type=radio]:checked ~ label, .vertical [type=checkbox]:checked ~ label {
+            border-bottom:0;
+        }
+        .vertical ul li label:hover {
+            border:1px solid #000069;
+        }
+        .vertical ul li .content {
+            height:0px;
+            border-top:0;
+        }
+        .vertical [type=radio]:checked ~ label ~ .content, .vertical [type=checkbox]:checked ~ label ~ .content {
+            height:auto;
+            border:1px solid #000069;
+        }
     </style>
 </head>
 
@@ -83,79 +168,112 @@
             <a href="#kin"><but>[킹귄]</but></a>
         </div>
         <div class="body">
-        <ul>
-            <div id="boutESD">
-                <li>
-                    <p id="ESD"></p>
-                    <h3>ESD</h3>
-                    <bol>&nbsp;ESD란</bol>
-                    &nbsp;Electronic Software Distribution(전자 소프트웨어 유통망)의 줄임말로, 소프트웨어를 판매하는 방식중 하나입니다. 인터넷이 발전하기 이전엔 비-물질적인 소프트웨어를 매매하기 위해선 CD, 디스켓 등의 물리적인 저장장치에 담을 수밖에 없었습니다.
-                    <img src="exam1.png" width="100%" height="100%" alt="플레이어들은 인터넷을 통해 빠르고 간편하게 소프트웨어를 받을 수 있습니다." title="과거와 현재 비교"><br>
-                    &nbsp;하지만 1990년대 WWW(World Wide Web = W3)인 인터넷이 등장하며 사람들은 인터넷을 통해 소프트웨어를 전자 상에서 거래하는 방식이 당시의 운송방식에 비교해 더 빠르고 확실함을 깨달았습니다.
-                    이후 2000년대에 밸브 사(社)의 '스팀'과 EA 다운로드센터(現 오리진)이 그 강점을 내세워 성공을 거두자 다른 소프트웨어 업체들에서도 ESD 시장에 발들이며 본격적인 ESD 시장이 형성되었습니다.<br>
-                    <img src="selltobuy.gif" width="100%" height="100%" class="left" alt="웹을 통한 매매는 판매자와 구매자 모두 이득입니다." title="웹을통한 소프트웨어 배포는 쌍방이득">
-                    &nbsp;ESD는 단순히 빠르고 확실한 것뿐만 아니라 비용상으로도 판매자나 구매자 모두에게 득이 되었습니다. 이전의 방식으로는 프로그램의 이식, 저장매체의 포장, 상품의 운송비 등 시간과 비용이 판매가에 모두 포함되어있었지만, ESD는 조금의 과장을 더 해서 지구 반대편에서 구매하더라도 더 저렴하게 구매할 수도 있습니다. 
-                    무엇보다 실물은 판매에 수량한도가 있지만, ESD는 제공서비스만 존재한다면 언제든 구매/이용이 가능하며 손상의 우려 또한 없습니다.                        <br><br>
-                    &nbsp;물론 너무 간편한 방식이 되려 문제가 되기도 합니다. 간단한 배포는 불법제품(일명 복돌이)의 확산을 쉽게 했고, 비(非)물리적인 제품 판매는 CD키나 구매계정을 잃으면 제품을 잃어버리는 꼴이 되며, 실물(패키지)은 중고로서의 상품 가치가 있지만, ESD는 물질적인'소유'가 불가능하다는 한계가 있습니다.
-                    이를 보완하기 위해 잦은 할인을 통한 낮은 가격을 강점으로 세운 스팀을 선발로 많은 ESD 업계가 스팀과 같은 방침을 따랐고, 몇몇 제작사는 소비자들의 물질적 소유욕을 만족시키기 위해 패키지발매 후 자사의 ESD와 연동시키는 방법을 택하기도 했습니다.
-                    <br><br>
-                    <img src="logos.png" width="40%" height="40%" class="left logo" alt="ESD 판매처의 로고들입니다." title="쉽게말해 '소프트웨어'를 '판매'하면 ESD">
-                    &nbsp;유명한 ESD로 이동통신사 ESD인 원스토어(네이버 앱스토어 + T + Olleh + U+)가 있고, OS기본 ESD인 애플의 아이튠즈스토어와 구글의 구글플레이, 마이크로소프트의 마이크로소프트 스토어가 있습니다. 이외에도 한국의 한글과컴퓨터(한컴), 안철수연구소(V3), 이스트소프트(알툴즈)나 중국의 바이두 앱스토어, 텐센트 앱스토어도 ESD에 포함됩니다.
-                    <br><br>
-                    <img src="logos2.png" width="18%" height="18%" class="right logo">
-                    게임 ESD에는 블리자드의 배틀넷이나 유플레이처럼 자사 게임 판매를 기본으로 하는 판매처와 +a로 타사의 게임도 제공하는 오리진과 스팀이 있고, 위의 판매처를 포함한 다른 사이트들의 게임 키를 판매하는 험블번들, 지오지 닷컴 등의 '키셀러'들이 있습니다. 
-                    <br><br>
-                </li>
-            </div>
-            <br>
             <div class="d1">
-                <li>
-                    <p id="steam"></p>
-                    <h3>Steam <a href="https://store.steampowered.com" target="_blank" title="스팀 바로가기">Go!</a></h3>
-                    
-
-                </li>
+                <p id="ESD"></p>
+                <h3>ESD</h3>
+                <bol>&nbsp;ESD란</bol>
+                &nbsp;Electronic Software Distribution(전자 소프트웨어 유통망)의 줄임말로, 소프트웨어를 판매하는 방식중 하나입니다. 인터넷이 발전하기 이전엔 비-물질적인 소프트웨어를 매매하기 위해선 CD, 디스켓 등의 물리적인 저장장치에 담을 수밖에 없었습니다.
+                <img src="exam1.png" width="100%" height="100%" alt="플레이어들은 인터넷을 통해 빠르고 간편하게 소프트웨어를 받을 수 있습니다." title="과거와 현재 비교"><br>
+                &nbsp;하지만 1990년대 WWW(World Wide Web = W3)인 인터넷이 등장하며 사람들은 인터넷을 통해 소프트웨어를 전자 상에서 거래하는 방식이 당시의 운송방식에 비교해 더 빠르고 확실함을 깨달았습니다.
+                이후 2000년대에 밸브 사(社)의 '스팀'과 EA의 'EA다운로드센터'(現 오리진)이 그 강점을 내세워 성공을 거두자 다른 소프트웨어 업체들에서도 ESD 시장에 발들이며 본격적인 ESD 시장이 형성되었습니다.<br>
+                <img src="selltobuy.gif" width="100%" height="100%" class="left" alt="웹을 통한 매매는 판매자와 구매자 모두 이득입니다." title="웹을통한 소프트웨어 배포는 쌍방이득">
+                &nbsp;ESD는 단순히 빠르고 확실한 것뿐만 아니라 비용상으로도 판매자나 구매자 모두에게 득이 되었습니다. 이전의 방식으로는 프로그램의 이식, 저장매체의 포장, 상품의 운송비 등 시간과 비용이 판매가에 모두 포함되어있었지만, ESD는 조금의 과장을 더 해서 지구 반대편에서 구매하더라도 더 저렴하게 구매할 수도 있습니다. 
+                무엇보다 실물은 판매에 수량한도가 있지만, ESD는 제공서비스만 존재한다면 언제든 구매/이용이 가능하며 손상의 우려 또한 없습니다.                        <br><br>
+                &nbsp;물론 너무 간편한 방식이 되려 문제가 되기도 합니다. 간단한 배포는 불법제품(일명 복돌이)의 확산을 쉽게 했고, 비(非)물리적인 제품 판매는 CD키나 구매계정을 잃으면 제품을 잃어버리는 꼴이 되며, 실물(패키지)은 중고로서의 상품 가치가 있지만, ESD는 물질적인'소유'가 불가능하다는 한계가 있습니다.
+                이를 보완하기 위해 잦은 할인을 통한 낮은 가격을 강점으로 세운 스팀을 선발로 많은 ESD 업계가 스팀과 같은 방침을 따랐고, 몇몇 제작사는 소비자들의 물질적 소유욕을 만족시키기 위해 패키지발매 후 자사의 ESD와 연동시키는 방법을 택하기도 했습니다.
+                <br><br>
+                <img src="logos.png" width="40%" height="40%" class="left logo" alt="ESD 판매처의 로고들입니다." title="쉽게말해 '소프트웨어'를 '판매'하면 ESD">
+                &nbsp;유명한 ESD로 이동통신사 ESD인 원스토어(네이버 앱스토어 + T + Olleh + U+)가 있고, OS기본 ESD인 애플의 아이튠즈스토어와 구글의 구글플레이, 마이크로소프트의 마이크로소프트 스토어가 있습니다. 이외에도 한국의 한글과컴퓨터(한컴), 안철수연구소(V3), 이스트소프트(알툴즈)나 중국의 바이두 앱스토어, 텐센트 앱스토어도 ESD에 포함됩니다.
+                <br><br>
+                <img src="logos2.png" width="18%" height="18%" class="right logo">
+                게임 ESD에는 블리자드의 배틀넷이나 유플레이처럼 자사 게임 판매를 기본으로 하는 판매처와 +a로 타사의 게임도 제공하는 오리진과 스팀이 있고, 위의 판매처를 포함한 다른 사이트들의 게임 키를 판매하는 험블번들, 지오지 닷컴 등의 '키셀러'들이 있습니다. 
+                <br><br>
             </div>
-            <div class="d1">
-                <li>
-                    <p id="origin"></p>
-                    <h3>Origin <a href="https://www.origin.com" target="_blank" title="오리진 바로가기">Go!</a></h3>
-                    
-
-                </li>
+            <div class="d1 accordion vertical">
+                <ul>
+                    <li>
+                        <p id="steam"></p>
+                        <input type="checkbox" id="checkbox-1" name="checkbox-accordion">
+                        <label for="checkbox-1">STEAM</label>
+                        <div class="content">
+                            <h3>Steam <a href="https://store.steampowered.com" target="_blank" title="스팀 바로가기">Go!</a></h3>
+                            <img src="steam logo.png" width="35%" class="right logo">
+                            스팀은 밸브 코퍼레이션(Valve Corporation)에서 개발하고 운영 중인 온라인 게임유통사이트로서 2014년에 이용자 1억 명을 돌파했고, 2018년 2월 기준 한국 이용자가 약 500만에 달하는 게임 ESD계의 가장 성공한 사례입니다.
+                            처음 2002년도에는 블리자드의 배틀넷처럼 자회사(밸브)의 하프라이프, 카운터 스트라이크 등을 플레이할 수 있는 게임 스트리밍서비스로 쓰였습니다. 
+                            이후 2005년도에 다른 회사 게임이 등록되며 판매를 시작했고, 현재는 소규모 개발팀에서 제작한 인디 게임들부터 대규모 개발사에서 만든 게임까지 판매하고 있으며 어지간한 패키지게임을 판매하는 기업들은 스팀에서 판매 중이라 해도 과언이 아닙니다.<br>
+                            <img src="MODandMarket.png" width="40%" class="left logo">
+                            스팀에서는 스팀 특유의 창작마당(개인 MOD 공유)과 장터 시스템이 존재하며 특정 이벤트기간에는 파격적인 할인을 진행하여 "연쇄할인마"라는 별칭으로도 유명합니다. (사족으로, 스팀의 할인은 밸브가 멋대로 하는 것이 아니고 파트너와 개발사들의 동의하에 진행됩니다) 
+                            또한, 스팀에서는 게임뿐만 아니라 게임메이커 같은 제작툴이나 웰페이퍼엔진과 같은 사용 소프트웨어와 다큐/영화 등의 영상물도 판매하고 있습니다.
+                            <img src="steamgames.png" width="100%" class=" logo">
+                            유명한 게임으론 밸브의 하프라이프시리즈, 포탈시리즈나 락스타의 GTA시리즈, 인디 게임인 투 더 문, 언더테일 등이 있으며 최근의 작품에는 배틀그라운드가 있습니다.
+                        </div>
+                    </li>
+                    <li>
+                        <p id="origin"></p>
+                        <input type="checkbox" id="checkbox-2" name="checkbox-accordian">
+                        <label for="checkbox-2">ORIGIN</label>
+                        <div class="content">
+                            <h3>Origin <a href="https://www.origin.com" target="_blank" title="오리진 바로가기">Go!</a></h3>
+                            <img src="Origin1.png" width="35%" class="right logo">
+                            오리진은 일렉트로닉아츠(Electronic Arts, EA)의 온라인 유통체제로 자사인 EA의 게임뿐만 아니라 타 회사 또는 스튜디오의 게임을 퍼블리싱하기도 합니다.
+                            2005년 EA다운로더로 시작하여 2007년 EA스토어와 초창기 스팀과 비슷하게 자사 게임 스트리밍서비스였던 EA다운로드매니저로 나뉘었다가 2011년 오리진으로 통합되어 ESD 사업을 본격적으로 시작하였습니다.<br>
+                            <img src="originpre.png" width="40%" class="left logo">
+                            종종 할인 이벤트를 진행하거나 전용 클라이언트를 운영하는 등 스팀과 유사점이 많아 자주 비교가 되곤 하는데 (정신 나간)스팀의 할인율을 고려했을 때 실질적인 경쟁력이 좋다고 할 순 없습니다. 
+                            하지만 일정 기간에 특정 게임을 무료로 배포하는<bol>'오리진의 선물'</bol>과 월정액을 내고 오리진 내의 The Vault에 포함된 수많은 게임을 마음껏 즐길 수 있는 오리진 특유의 정액제 시스템인 <bol>'오리진 엑세스'</bol>가 존재합니다.<br>
+                            <img src="EAgames.png" width="100%"class="logo">
+                            유명한 게임으론 배틀필드시리즈, 미러스 엣지시리즈와 심즈/심시티 시리즈, 니드 포 스피드 시리즈와 피파시리즈가 있습니다.
+                        </div>
+                    </li>
+                    <li>
+                        <p id="humble"></p>
+                        <input type="checkbox" id="checkbox-3" name="checkbox-accordian">
+                        <label for="checkbox-3">HUMBLE BUNDLE</label>
+                        <div class="content">
+                            <h3>Humble Bundle <a href="https://www.humblebundle.com" target="_blank" title="험블번들 바로가기">Go!</a></h3>
+                            <img src="HB1.png" width="40%" class="right logo">
+                            다양한 판매처(스팀/오리진/유플레이 등)의 키 판매와 더불어 이름에서 볼수있듯 '번들'이라하여 게임, 툴, 전자책 등 디지털콘텐츠를 패키지로 묶어파는 방식으로 유명합니다.<br>
+                            <img src="HBlogos.png" width="40%" class="left logo">
+                            각 번들은 정해진 기간동안 판매하는데 2주간 판매하는 일반적인 Humble Bundle(보통은 주제에 맞춰 험블-컨셉명-번들이라는 이름으로 판매합니다), 
+                            E북을 취급하며 1주간 판매하는 Books Bundle, 반짝세일과 같은의미로 하루간 판매하는 Flash Bundle 그리고 1메인(대작게임) 1~3개 + 서브(인디게임)3~5개를 한 달주기로 판매하는 Humble Monthly가 있습니다.
+                            <img src="HBpay.png" width="100%" class="logo">
+                            험블번들의 놀라운 점은 사용자가 번들의 가격을 지정할 수 있다는 점입니다. 최소 1달러에서 시작하여 많은 금액을 낼수록 많은 상품을 받을수 있으며, 고정가인 15달러/25달러를 넘으면 번들 내 모든 콘텐츠를 받을 수 있습니다.
+                            (보통 '티어'라 하여 1/5/8/15/25로 나뉘며 티어별로 얻을수 있는 상품 수가 제한되어있습니다) 또한 구매금액에서 콘텐츠제작자/자선단체기부/험블번들팀에 돌아갈 비율도 직접 설정이 가능합니다.
+                        </div>
+                    </li>
+                    <li>
+                        <p id="amazon"></p>
+                        <input type="checkbox" id="checkbox-4" name="checkbox-accordian">
+                        <label for="checkbox-4">AMAZON</label>
+                        <div class="content">
+                            <h3>Amazon  <a href="https://www.amazon.com" target="_blank" title="아마존 바로가기">Go!</a></h3>
+                            <img src="AZlogo.png" width="35%" class="right logo">
+                            온라인 쇼핑몰로 유명한 아마존은 처음엔 종이책만 취급하던 인터넷 서점이였지만 사업확장을 거쳐 현재는 e북,음반,게임,노트북,핸드폰 등 다양하게 판매하고있습니다. 
+                            실물상품은 used(중고)물품 판매도 이루어져 놀라운 값에 득템할수도 있습니다. 아마존도 다른 ESD처럼 PC게임판매도 진행하는데, ESD업계의 할인정책에 아마존 특유의 할인율도 적용되어 최신게임조차 무서운 할인값에 파는 경우를 볼 수 있습니다.(운이좋으면 신작게임을 반값에 구매 가능합니다).<br>
+                            <img src="AZpack.png" width="35%" class="left logo">
+                            또한, '이번주의 딜'이라 불리는 1주 간격으로 유명 시리즈물을 묶어 할인가에 판매하는 상품은 대체적인 할인율이 87%에 달한다고 합니다. 
+                            거기다 본회사인 아마존에서 아마존 프라임 멤버쉽(연 $99)에 가입했다면 사전구매(및 얼리엑세스구매)시 20%할인받을 수 있고, 그 자회사인 트위치 프라임에 연동하여 트위치 구독/광고제거/기타 인게임 혜택과 더불어 매 달마다 변경되는 무료게임을 즐길 수 있으며 해당게임 구매시 할인받을 수 있습니다.
+                        </div>
+                    </li>
+                    <li>
+                        <p id="gog"></p>
+                        <input type="checkbox" id="checkbox-5" name="checkbox-accordian">
+                        <label for="checkbox-5">G.O.G.</label>
+                        <div class="content">
+                            <h3>Good Old Game <a href="https://www.gog.com" target="_blank" title="지오지 바로가기">Go!</a></h3>
+                        
+                        </div>
+                    </li>
+                    <li>
+                        <p id="kin"></p>
+                        <input type="checkbox" id="checkbox-6" name="checkbox-accordian">
+                        <label for="checkbox-6">KINGUIN</label>
+                        <div class="content">
+                            <h3>Kinguin <a href="https://www.kinguin.net/" target="_blank" title="킹귄 바로가기">Go!</a></h3>
+                        
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="d1">
-                <li>
-                    <p id="humble"></p>
-                    <h3>Humble Bundle <a href="https://www.humblebundle.com" target="_blank" title="험블번들 바로가기">Go!</a></h3>
-                    
-
-                </li>
-            </div>
-            <div class="d1">
-                <li>
-                    <p id="amazon"></p>
-                    <h3>Amazon  <a href="https://www.amazon.com" target="_blank" title="아마존 바로가기">Go!</a></h3>
-                   
-                </li>
-            </div>
-            <div class="d1">
-                <li>
-                    <p id="gog"></p>
-                    <h3>Good Old Game <a href="https://www.gog.com" target="_blank" title="지오지 바로가기">Go!</a></h3>
-                    
-
-                </li>
-            </div>
-            <div class="d1">
-                <li>
-                    <p id="kin"></p>
-                    <h3>Kinguin <a href="https://www.kinguin.net/" target="_blank" title="킹귄 바로가기">Go!</a></h3>
-                    
-
-                </li>
-            </div>
-        </ul>
         </div>
     </div>
     <hr size="10"></hr>
